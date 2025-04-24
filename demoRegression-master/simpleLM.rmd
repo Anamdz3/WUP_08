@@ -75,5 +75,7 @@ plot(WEIGHT~CHEST,data=bears)
 abline(mCHEST)
 summary.lm(mCHEST)
 ```
+For this last plot, we see that the residual standard error is 33.08, and the adjusted R-squared is 0.962. 
  
+
  
