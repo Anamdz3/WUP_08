@@ -26,7 +26,26 @@ plot(WEIGHT~NECK,data=bears)
 abline(simp)
 summary.lm(simp)
 ```
-
+Based on the analysis of WEIGHT as explained by NECK, the residual standard error (RSE) is 43.91, and the adjusted R-squared value is 0.87.
 
 ## Compare all models that predict WEIGHT other than NECK. Then order them from worst to best by its value of Adjusted-Rsquared (bigger is better), or by RSE (residual standard error) where smaller is better. 
+```{r}
+mHEADLEN <- lm(WEIGHT~HEADLEN,data=bears)
+plot(WEIGHT~HEADLEN,data=bears)
+abline(mHEADLEN)
+summary.lm(mHEADLEN)
+```
 
+Based on the observations, the residual standard error is 67.81, and the adjusted R-squared is 0.69. When ranking the models from best to worst, the most effective model is the one where WEIGHT is explained by NECK, followed by the model where WEIGHT is explained by HEADLEN.
+
+NECK RSE is 43.91
+HEADLEN RSE is 67.81
+
+```{r}
+mHEADLEN <- lm(WEIGHT~HEADWTH,data=bears)
+plot(WEIGHT~HEADWTH,data=bears)
+abline(mHEADWTH)
+summary.lm(mHEADWTH)
+```
+
+We can see that for this plot, the residual standard error is 76.41 and the adjusted R squared is 0.6064. 
